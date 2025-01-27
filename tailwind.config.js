@@ -11,8 +11,8 @@ export default {
         kelly: ['Kelly Slab']
       },
       backgroundImage: {
-        'bannerbg' : "url('./src/assets/images/banner-bg.jpg')",
-        'menubg' : "url('./src/assets/images/menu-bg.png')"
+        'bannerbg' : "url('./public/banner-bg.jpg')",
+        'menubg' : "url('./public/menu-bg.png')"
       },
     },
   },
