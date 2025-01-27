@@ -80,12 +80,14 @@ const MenuCard = () => {
                     {menus.map((menu) => (
                         <button
                             key={menu._id}
-                            className={`btn uppercase border-blue-400 hover:bg-blue-400 hover:text-base-100 text-blue-400 btn-outline ${activeTab === menu._id ? 'bg-blue-400 text-base-100' : ''}`}
+                            className={`btn uppercase border-blue-400 hover:bg-blue-400 hover:text-base-100 text-blue-400 btn-outline ${activeTab === menu._id ? 'bg-blue-400 text-white shadow' : ''}`}
                             onClick={() => setActiveTab(menu._id)}
                         >
                             {menu.name}
                         </button>
                     ))}
+                </div>
+                <div className='flex justify-center'>
                     <button
                         className="btn btn-ghost"
                         onClick={() => setIsAddMenuModalOpen(true)} // Open Add Menu modal
