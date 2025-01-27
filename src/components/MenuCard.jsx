@@ -75,18 +75,20 @@ const MenuCard = () => {
     return (
         <>
             {/* Dynamic Tabs */}
-            <div className="max-w-7xl mx-auto font-oswald px-4 sm:px-6 lg:px-8 mt-4">
-                <div className="flex justify-center space-x-4 flex-wrap">
+            <div className="max-w-7xl mx-auto font-oswald px-4 sm:px-6 lg:px-8 mt-4" id='menu'>
+                <div className="flex space-x-4 justify-center overflow-x-auto scrollbar-hide">
                     {menus.map((menu) => (
                         <button
                             key={menu._id}
-                            className={`btn uppercase border-blue-400 hover:bg-blue-400 hover:text-base-100 text-blue-400 btn-outline ${activeTab === menu._id ? 'bg-blue-400 text-white shadow' : ''}`}
+                            className={`btn uppercase border-blue-400 hover:bg-blue-400 hover:text-base-100 text-blue-400 btn-outline ${activeTab === menu._id ? 'bg-blue-400 text-white shadow' : ''
+                                }`}
                             onClick={() => setActiveTab(menu._id)}
                         >
                             {menu.name}
                         </button>
                     ))}
                 </div>
+
                 <div className='flex justify-center'>
                     <button
                         className="btn btn-ghost"

@@ -21,19 +21,19 @@ const Navbar = () => {
               Home
             </a>
             <a
-              href="/"
+              href="#menu"
               className="text-base-content hover:text-blue-600 transition-colors duration-200"
             >
               Menu
             </a>
             <a
-              href="/menu"
+              href="#"
               className="text-base-content hover:text-blue-600 transition-colors duration-200"
             >
               Make a reservation
             </a>
             <a
-              href="/contact"
+              href="#contact"
               className="text-base-content hover:text-blue-600 transition-colors duration-200"
             >
               Contact us
@@ -69,19 +69,19 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="/about"
+            href="#menu"
             className="block w-full text-base-content hover:text-blue-600 hover:bg-gray-50 px-4 py-3 transition-colors duration-200"
           >
             Menu
           </a>
           <a
-            href="/menu"
+            href="#"
             className="block w-full text-base-content hover:text-blue-600 hover:bg-gray-50 px-4 py-3 transition-colors duration-200"
           >
             Make a reservation
           </a>
           <a
-            href="/contact"
+            href="#contact"
             className="block w-full text-base-content hover:text-blue-600 hover:bg-gray-50 px-4 py-3 transition-colors duration-200"
           >
             Contact Us
