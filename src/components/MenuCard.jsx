@@ -76,7 +76,7 @@ const MenuCard = () => {
         <>
             {/* Dynamic Tabs */}
             <div className="max-w-7xl mx-auto font-oswald px-4 sm:px-6 lg:px-8 mt-4" id='menu'>
-                <div className="flex space-x-4 justify-center overflow-x-auto scrollbar-hide">
+                <div className="flex space-x-4 justify-start md:justify-center overflow-x-auto scrollbar-hide">
                     {menus.map((menu) => (
                         <button
                             key={menu._id}
