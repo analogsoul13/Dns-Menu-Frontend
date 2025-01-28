@@ -1,6 +1,6 @@
 ## Food Menu Project Frontend
 
-# This repository contains the backend for the Food Menu Project
+# This repository contains the frontend for the Food Menu Project
 
 ## Getting Started
 - Prerequisites
