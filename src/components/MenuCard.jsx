@@ -65,7 +65,7 @@ const MenuCard = () => {
                 <div className="flex justify-between items-center">
                     <div className="font-bold text-base-content sm:text-[26px]">{item.name}</div>
                     <div className="flex-grow border-dotted border-t-4 border-gray-300 mx-2"></div>
-                    <div className="text-base-content sm:text-[26px] font-bold">{item.price}</div>
+                    <div className="text-base-content sm:text-[26px] font-bold">$ {item.price}</div>
                 </div>
                 <div className="text-gray-300 text-[18px] font-kelly mt-2">{item.description}</div>
             </div>
@@ -135,7 +135,18 @@ const MenuCard = () => {
             <AddItem
                 isOpen={isAddItemModalOpen}
                 onClose={() => setIsAddItemModalOpen(false)} // Close Add Item modal
-                onItemAdded={(newItem) => setMenuItems((prev) => [...prev, newItem])}
+                onItemAdded={async (newItem) => {
+                    // Add the new item to the menuItems state
+                    setMenuItems((prev) => [...prev, newItem]);
+
+                    // Re-fetch the menu items to confirm the state reflects the backend data
+                    try {
+                        const items = await fetchMenuItems(activeTab);
+                        setMenuItems(items.data);
+                    } catch (err) {
+                        setError('Failed to fetch updated menu items');
+                    }
+                }}
                 activeMenuId={activeTab}
             />
         </>

@@ -30,6 +30,12 @@ const AddItem = ({ isOpen, onClose, onItemAdded, activeMenuId }) => {
             if (res.status === 201) {
                 toast.success("Item Succesfully added")
                 onItemAdded(res.data);
+                setItem({
+                    name: "",
+                    description: "",
+                    price: ""
+                });
+                
                 onClose()
             }
 
